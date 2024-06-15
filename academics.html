@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>University Academics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: rgba(51, 51, 51, 0.8); 
+            color: white;
+            padding: 1px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s; 
+        }
+
+        ul.nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around; 
+            align-items: center; 
+        }
+
+        ul.nav li {
+            display: inline;
+        }
+
+        ul.nav li a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        ul.nav li a:hover {
+            color: orange;
+            text-decoration: underline; 
+        }
+
+        .nav .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5px;
+            font-weight: bold;
+            color: BLACK; 
+        }
+
+        .nav .logo img {
+            height: 30px; 
+            margin-right: 10px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .selection {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .selection select {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 20px;
+            flex: 1;
+        }
+
+        .program-images {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .program-images div {
+            text-align: center;
+            width: 200px;
+        }
+
+        .program-images img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .program-images p {
+            margin: 10px 0;
+        }
+
+        .program-images div:hover img {
+            transform: scale(1.1);
+        }
+
+        #courses {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .show-courses {
+            display: block !important;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .course-details {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .course-details.active {
+            display: block;
+        }
+
+        .course-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .course-details p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+		
+		
+		
+		img{
+			width: 400px;
+		}
+		
+		#submit-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+             <li class="logo"> VIT</li> 
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="fee.html">Fee</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>University Academics</h1>
+		
+    </header>
+
+        <div class="program-images">
+            <div>
+                <a href = "engineering.html">
+                <img src="engineering.jpg" alt="Engineering" style="width:300px">
+                <p>Engineering</p></a>
+            </div>
+            <div>
+                <a href = "compscience.html">
+                <img src="cs.jpg" alt="Computer Science" style="width:300px"> 
+                <p>Computer Science</p>
+            </div>
+            <div>
+                <a href = "business.html">
+                <img src="business.jpg" alt="Business Management" style="width:300px ">
+                <p>Business Management</p>
+            </div>
+        </div>
+
+        <div class="course-details" id="engineering-details">
+            <h2>Engineering</h2>
+            <p>Engineering is the application of scientific principles to design and build machines, structures, and systems. It involves analyzing problems, finding creative solutions, and implementing them to improve society's quality of life.</p>
+            <p>Engineers work in various fields such as civil, mechanical, electrical, and computer engineering. They play a crucial role in developing technology, infrastructure, and sustainable solutions for global challenges.</p>
+        </div>
+
+        <div class="course-details" id="computer-science-details">
+            <h2>Computer Science</h2>
+            <p>Computer Science is the study of algorithms, data structures, and programming languages used to create software and solve computational problems. It encompasses theoretical foundations, practical applications, and innovative technologies.</p>
+            <p>Computer scientists develop software systems, design algorithms for data analysis, and research emerging technologies like artificial intelligence, machine learning, and cybersecurity.</p>
+        </div>
+
+        <div class="course-details" id="business-management-details">
+            <h2>Business Management</h2>
+            <p>Business Management involves planning, organizing, leading, and controlling resources to achieve organizational goals effectively and efficiently. It encompasses various disciplines such as marketing, finance, operations, and human resources.</p>
+            <p>Business managers make strategic decisions, allocate resources, and implement policies to drive business growth and sustainability. They analyze market trends, assess risks, and develop strategies to adapt to changing environments.</p>
+        </div>
+		
+		
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const programmeSelect = document.getElementById('programme');
+            const coursesSelect = document.getElementById('courses');
+            const submitBtn = document.getElementById('submit-btn');
+            const courseDetails = document.querySelectorAll('.course-details');
+
+            programmeSelect.addEventListener('change', function() {
+                const selectedProgramme = this.value;
+                if (selectedProgramme) {
+                    coursesSelect.classList.add('show-courses');
+                    populateCourses(selectedProgramme);
+                } else {
+                    coursesSelect.classList.remove('show-courses');
+                    coursesSelect.innerHTML = '<option value="" selected disabled>Select Course</option>';
+                }
+            });
+
+            function populateCourses(programme) {
+                let courses = [];
+                switch (programme) {
+                    case 'engineering':
+                        courses = ['Mechanical Engineering', 'Electrical Engineering', 'Civil Engineering'];
+                        break;
+                    case 'computer-science':
+                        courses = ['Computer Networks', 'Database Management', 'Computer Application'];
+                        break;
+                    case 'business-management':
+                        courses = ['Marketing Management', 'Financial Management', 'Human Resource Management'];
+                        break;
+                    default:
+                        break;
+                }
+
+                coursesSelect.innerHTML = '<option value="" selected disabled>Select Course</option>';
+
+                courses.forEach(course => {
+                    const option = document.createElement('option');
+                    option.textContent = course;
+                    option.value = course.toLowerCase().replace(/\s+/g, '-');
+                    coursesSelect.appendChild(option);
+                });
+            }
+
+            submitBtn.addEventListener('click', function() {
+                const selectedCourse = coursesSelect.value;
+                courseDetails.forEach(detail => {
+                    detail.classList.remove('active');
+                });
+
+                if (selectedCourse) {
+                    const selectedDetails = document.getElementById(${selectedCourse}-details);
+                    if (selectedDetails) {
+                        selectedDetails.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

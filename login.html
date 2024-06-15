@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Admission Process | Login</title>
+    
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #e1f5fe;
+        }
+
+        .container {
+            background-image: url("clg.jpg");
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blur {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+       
+
+        .login {
+            text-align: center;
+            width: 430px;
+            height: 350px;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+        }
+
+        .login h1 {
+            margin: 0;
+            padding: 10px;
+            text-shadow: 5px 2px 5px white;
+            font-family: Franklin Gothic Medium;
+        }
+
+        .login form {
+            margin-top: 20px;
+        }
+
+        .login form p {
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .login form input[type="text"],
+        .login form input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: Arial;
+        }
+
+        .login form input[type="submit"],
+        .login form input[type="reset"],
+        .login form button {
+            width: calc(33.33% - 10px);
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            background-color: #04AA6D;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .login form input[type="submit"]:hover,
+        .login form input[type="reset"]:hover,
+        .login form button:hover {
+            background-color: #039560;
+        }
+
+        .login form p a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .login form p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="blur"></div>
+    <header>
+        <h1 style="color:white">VIT UNIVERSITY</h1>
+
+    </header>
+    <div class="login">
+        <h1>STUDENT'S LOGIN</h1>
+        <form action="/login" id = "login" method="post">
+            <div align="center">
+                <p><label for="name"><b>Username: </b></label>
+                    <input type="text" placeholder="Enter Username" id="name" name="uname" required></p>
+                <p><label for="password"><b>Password: </b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required></p>
+                <!--<p><span class="psw">Forgot <a href="#">password?</a></span></p> -->
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label></p>
+            </div>
+            <div id="buttons">
+                <button onclick="history.back()" class="button">Back</button>
+                <button type="submit" class="button">Login</button>
+                <input type="reset" class="button" value="Reset">
+            </div>
+            <p>Not a member? <a href="Sign.html">Signup now</a></p>
+        </form>
+        
+    </div>
+</div>
+</body>
+</html>

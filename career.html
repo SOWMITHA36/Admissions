@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: repeat;
+            color: #fff;
+        }
+        nav {
+            background-color: rgba(51, 51, 51, 0.8); 
+            color: white;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s; 
+        }
+
+        ul.nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around; 
+            align-items: center; 
+        }
+
+        ul.nav li {
+            display: inline;
+        }
+
+        ul.nav li a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        ul.nav li a:hover {
+            color: orange;
+            text-decoration: underline; 
+        }
+
+        .nav .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: BLACK; 
+        }
+
+        .nav .logo img {
+            height: 30px; 
+            margin-right: 10px;
+        }
+
+        .header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 120px auto 20px auto;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #f0ad4e;
+            text-align: center;
+            font-size: 44px;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .opportunities-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-inner {
+            display: inline-block;
+            transform: translateX(100%);
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .opportunity {
+            display: inline-block;
+            padding: 20px;
+            margin-right: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .opportunity h2 {
+            color: #f0ad4e;
+        }
+
+        .opportunity p {
+            color: #fff;
+        }
+
+        .opportunity img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+             <li class="logo"><img src="logo.png" alt="Logo"> VIT</li> 
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="fee.html">Fee</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+    <div class="header">
+        <br><br>
+        <h1>Career</h1>
+    </div>
+
+    <div class="container">
+        <h2>Placements</h2>
+        <div class="opportunities-container">
+            <div class="marquee">
+                <div class="marquee-inner">
+                    <div class="opportunity">
+                        <img src="google.png" alt="Google">
+                        <h2>Google</h2>
+                        <p>Google is a multinational technology company that specializes <br>
+						in Internet-related services and products.<br>
+						These include online advertising technologies, search, cloud computing, software, and hardware.</p>
+                    </div>
+                    <div class="opportunity">
+                        <img src="microsoft.png" alt="Microsoft">
+                        <h2>Microsoft</h2>
+                        <p>Microsoft is a multinational technology corporation that develops,<br>
+						manufactures, licenses, supports, and sells computer software, consumer electronics,<br>
+						personal computers, and related services.</p>
+                    </div>
+                    <div class="opportunity">
+                        <img src="amazon.png" alt="Amazon">
+                        <h2>Amazon</h2>
+                        <p>Amazon is an American multinational technology <br>
+						company that focuses on e-commerce, cloud computing,<br>
+						digital streaming, and artificial intelligence.</p>
+                    </div>
+                    <div class="opportunity">
+                        <img src="apple.png" alt="Apple">
+                        <h2>Apple</h2>
+                        <p>Apple Inc. is an American multinational technology company that designs, <br>
+						develops, and sells consumer electronics, <br>
+						computer software, and online services.</p>
+                    </div>
+                    <div class="opportunity">
+                        <img src="facebook.png" alt="Facebook">
+                        <h2>Facebook</h2>
+                        <p>Facebook is an American online social media and<br>
+						social networking service company. It is based in Menlo Park, California.<br>
+						It was founded by Mark Zuckerberg.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 VIT. All rights reserved.</p>
+    </div>
+</body>
+</html>
